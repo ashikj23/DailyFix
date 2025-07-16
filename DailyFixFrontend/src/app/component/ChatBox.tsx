@@ -9,7 +9,7 @@ type Props = {
 export default function ChatBox({ roomId, messages }: Props) {
   const generateSummary = () => {
     api
-      .post("/ai/summarize", { roomId })
+      .post("/api/ai/summarize", { roomId })
       .then((res) => alert("Summary:\n" + res.data.summary))
       .catch(console.error);
   };
